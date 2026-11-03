@@ -3,4 +3,5 @@ obj/
 .packages/
 .nuget-cache/
 .idea/
+dist/
 *.user

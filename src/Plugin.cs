@@ -61,9 +61,9 @@ namespace MusicBeePlugin
                 Author = "Ashus",
                 TargetApplication = string.Empty,
                 Type = PluginType.General,
-                VersionMajor = 1,
-                VersionMinor = 0,
-                Revision = 0,
+                VersionMajor = (short)typeof(Plugin).Assembly.GetName().Version.Major,
+                VersionMinor = (short)typeof(Plugin).Assembly.GetName().Version.Minor,
+                Revision = (short)typeof(Plugin).Assembly.GetName().Version.Build,
                 MinInterfaceVersion = MinInterfaceVersion,
                 MinApiRevision = MinApiRevision,
                 ReceiveNotifications = ReceiveNotificationFlags.PlayerEvents,
@@ -208,7 +208,8 @@ namespace MusicBeePlugin
             _log = new DiagnosticLog(storageDirectory);
             _store = new SettingsStore(storageDirectory);
             _settings = _store.Load(out _configurationWarning);
-            _log.Write("Plugin 1.0.0 initialized; host-localized UI and radio error matching enabled.");
+            _log.Write("Plugin " + typeof(Plugin).Assembly.GetName().Version +
+                " initialized; host-localized UI and radio error matching enabled.");
             if (_configurationWarning != null)
                 _log.Write(_configurationWarning);
         }

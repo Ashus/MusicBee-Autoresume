@@ -39,5 +39,25 @@
     <EmbeddedResource Include="src\Resources\UiEnglish.resx"><ManifestResourceName>MusicBeePlugin.Resources.UiEnglish</ManifestResourceName><LogicalName>MusicBeePlugin.Resources.UiEnglish.resources</LogicalName><WithCulture>false</WithCulture></EmbeddedResource>
     <EmbeddedResource Include="src\Resources\UiCzech.resx"><ManifestResourceName>MusicBeePlugin.Resources.UiCzech</ManifestResourceName><LogicalName>MusicBeePlugin.Resources.UiCzech.resources</LogicalName><WithCulture>false</WithCulture></EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="build.cmd" />
+    <Content Include="VERSION" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateReleaseVersion" BeforeTargets="CoreCompile">
+    <PropertyGroup>
+      <ReleaseVersion>$([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)\VERSION').Trim())</ReleaseVersion>
+    </PropertyGroup>
+    <ItemGroup>
+      <ReleaseAttribute Include="System.Reflection.AssemblyVersionAttribute">
+        <_Parameter1>$(ReleaseVersion)</_Parameter1>
+      </ReleaseAttribute>
+      <ReleaseAttribute Include="System.Reflection.AssemblyFileVersionAttribute">
+        <_Parameter1>$(ReleaseVersion)</_Parameter1>
+      </ReleaseAttribute>
+    </ItemGroup>
+    <WriteCodeFragment Language="C#" AssemblyAttributes="@(ReleaseAttribute)" OutputFile="$(IntermediateOutputPath)ReleaseVersion.g.cs">
+      <Output TaskParameter="OutputFile" ItemName="Compile" />
+    </WriteCodeFragment>
+  </Target>
 </Project>
