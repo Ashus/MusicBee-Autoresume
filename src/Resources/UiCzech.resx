@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Description" xml:space="preserve"><value>Automatické přehrávání a opětovné připojení rádia.</value></data>
+  <data name="Autoplay" xml:space="preserve"><value>Přehrát při spuštění MusicBee</value></data>
+  <data name="AfterSleep" xml:space="preserve"><value>Obnovit přehrávání po probuzení</value></data>
+  <data name="AfterConnection" xml:space="preserve"><value>Obnovit přehrávání po chybě připojení</value></data>
+  <data name="RecoveryHelp" xml:space="preserve"><value>Při chybě rádia zkusí další položku a na konci začne znovu. U jediné stanice opakuje připojení.</value></data>
+  <data name="SaveFailure" xml:space="preserve"><value>Nastavení se nepodařilo uložit. Původní nastavení zůstalo v platnosti. Ověř oprávnění k zápisu do složky nastavení.</value></data>
+  <data name="InitFailure" xml:space="preserve"><value>Inicializace selhala ({0}). Automatická obnova přehrávání je vypnutá.</value></data>
+  <data name="RuntimeFailure" xml:space="preserve"><value>Automatická obnova přehrávání byla po chybě vypnuta ({0}).</value></data>
+  <data name="PowerWarning" xml:space="preserve"><value>Události napájení nejsou dostupné ({0}).</value></data>
+  <data name="LoadFailure" xml:space="preserve"><value>Nastavení se nepodařilo načíst. Použije se záloha nebo výchozí nastavení.</value></data>
+  <data name="BackupRestored" xml:space="preserve"><value>Nastavení bylo obnoveno ze zálohy.</value></data>
+  <data name="AllSettingsFailed" xml:space="preserve"><value>Nastavení ani jeho zálohu se nepodařilo načíst. Použije se výchozí nastavení.</value></data>
+</root>

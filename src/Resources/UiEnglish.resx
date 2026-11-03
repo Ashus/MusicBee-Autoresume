@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Description" xml:space="preserve"><value>Automatic playback and radio reconnection.</value></data>
+  <data name="Autoplay" xml:space="preserve"><value>Autoplay on MusicBee launch</value></data>
+  <data name="AfterSleep" xml:space="preserve"><value>Resume playing after sleep</value></data>
+  <data name="AfterConnection" xml:space="preserve"><value>Resume playing after connection error</value></data>
+  <data name="RecoveryHelp" xml:space="preserve"><value>On a radio error, try the next playlist entry and wrap at the end. With one entry, retry the same station.</value></data>
+  <data name="SaveFailure" xml:space="preserve"><value>Settings could not be saved. Your previous settings remain active. Check write permissions for the settings folder.</value></data>
+  <data name="InitFailure" xml:space="preserve"><value>Initialization failed ({0}). Automatic playback recovery is disabled.</value></data>
+  <data name="RuntimeFailure" xml:space="preserve"><value>Automatic playback recovery was disabled after an error ({0}).</value></data>
+  <data name="PowerWarning" xml:space="preserve"><value>Power notifications are not available ({0}).</value></data>
+  <data name="LoadFailure" xml:space="preserve"><value>Settings could not be loaded. A backup or the default settings will be used.</value></data>
+  <data name="BackupRestored" xml:space="preserve"><value>Settings were restored from a backup.</value></data>
+  <data name="AllSettingsFailed" xml:space="preserve"><value>Neither settings nor their backup could be loaded. The default settings will be used.</value></data>
+</root>

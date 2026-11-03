@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{74B01291-B35D-49D9-9BD5-55C1D83FE98D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MusicBeePlugin</RootNamespace>
+    <AssemblyName>MB_Autoresume</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <RestorePackagesPath>$(MSBuildThisFileDirectory).packages</RestorePackagesPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <RuntimeIdentifiers>win-x86</RuntimeIdentifiers>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols Condition=" '$(Configuration)' == 'Debug' ">true</DebugSymbols>
+    <Optimize Condition=" '$(Configuration)' == 'Release' ">true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="sdk\MusicBeeInterface.cs"><Link>Interop\MusicBeeInterface.cs</Link></Compile>
+    <Compile Include="src\ConnectionRecovery.cs" />
+    <Compile Include="src\Plugin.cs" />
+    <Compile Include="src\MusicBeeAdapter.cs" />
+    <Compile Include="src\ResumeCoordinator.cs" />
+    <Compile Include="src\SettingsStore.cs" />
+    <Compile Include="src\UiText.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="src\Resources\UiEnglish.resx"><ManifestResourceName>MusicBeePlugin.Resources.UiEnglish</ManifestResourceName><LogicalName>MusicBeePlugin.Resources.UiEnglish.resources</LogicalName><WithCulture>false</WithCulture></EmbeddedResource>
+    <EmbeddedResource Include="src\Resources\UiCzech.resx"><ManifestResourceName>MusicBeePlugin.Resources.UiCzech</ManifestResourceName><LogicalName>MusicBeePlugin.Resources.UiCzech.resources</LogicalName><WithCulture>false</WithCulture></EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
